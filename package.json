@@ -1,0 +1,23 @@
+{
+  "name": "uni-v3-basic",
+  "version": "1.0.0",
+  "description": "uniapp + vue3 + vite 搭建项目的基础架构",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kid-kang/uni-v3-basic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kid-kang/uni-v3-basic/issues"
+  },
+  "homepage": "https://github.com/kid-kang/uni-v3-basic#readme",
+  "dependencies": {
+    "pinia": "^2.0.34"
+  }
+}
