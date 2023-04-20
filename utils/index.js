@@ -54,43 +54,6 @@ export const downloadFile = (url, name) => {
 }
 
 /**
- * 根据身份号推断出生日期和性别
- * @param {String} id -身份证号
- */
-export function formatSexAndBirthWithIdcard(id) {
-  let birth = '',
-    sex = ''
-
-  if (id && id.length >= 14) {
-    const birthStr = id.substring(6, 14)
-    const year = birthStr.substring(0, 4)
-    const month = birthStr.substring(4, 6)
-    const day = birthStr.substring(6, 8)
-    birth = `${year}-${month}-${day}`
-  }
-
-  if (id && id.length >= 17) {
-    const sexFlag = +id[16]
-    if (sexFlag % 2 === 0) {
-      sex = {
-        name: '女',
-        id: '2',
-      }
-    } else {
-      sex = {
-        name: '男',
-        id: '1',
-      }
-    }
-  }
-
-  return {
-    birth,
-    sex,
-  }
-}
-
-/**
  * 根据经纬度获取两点距离
  * @param la1 第一个坐标点的纬度 如：24.445676
  * @param lo1 第一个坐标点的经度 如：118.082745

@@ -86,6 +86,16 @@ export const getLocationAuth = (launchAuth) => {
   })
 }
 
+//判断是否在微信中
+export const isWechat = () => {
+  var ua = window.navigator.userAgent.toLowerCase()
+  if (ua.match(/micromessenger/i) == 'micromessenger') {
+    return true
+  } else {
+    return false
+  }
+}
+
 // 通知更新微信小程序版本
 export const checkMiniProgramUpdate = () => {
   if (uni.canIUse('getUpdateManager')) {
