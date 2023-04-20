@@ -78,7 +78,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+view {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -87,6 +88,16 @@ video {
   font: inherit;
   font-weight: normal;
   vertical-align: baseline;
+}
+text,
+rich-text {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+input,
+textarea {
+  font-weight: normal;
+  z-index: 0;
 }
 article,
 aside,
@@ -127,7 +138,8 @@ th,
 td {
   vertical-align: middle;
 }
-a {
+a,
+uni-link {
   outline: none;
   color: #16418a;
   text-decoration: none;

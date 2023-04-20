@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/kid-kang/uni-v3-basic#readme",
   "dependencies": {
-    "pinia": "^2.0.34"
+    "dayjs": "^1.11.7"
   }
 }

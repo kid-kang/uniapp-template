@@ -5,6 +5,7 @@ uniapp + vue3 + vite 搭建项目的基础架构
 
 - 使用HbuilderX创建自带uni-ui模板的vue3项目（创建完成后发现有个.vite文件夹，所以猜想这个项目是vite构建的；一般情况下，不建议删除 .vite 文件夹下的空文件，因为它们是 Vite 构建工具生成的临时文件，如果误删可能会影响项目的构建和运行。）
 - HbuilderX自带scss，若没下载运行后会自动下载scss插件
+- HbuilderX自带状态管理（VueX, Pinia）,只需按要求引入即可。[详情](https://uniapp.dcloud.net.cn/tutorial/vue3-pinia.html#%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86-pinia)
 - 答疑：
   - uni_modules和node_modules的区别：
     - uni_modules用于存放与 uni-app 框架集成的组件库和插件；
