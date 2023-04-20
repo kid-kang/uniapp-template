@@ -1,17 +1,85 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-app"
-		}
-	}],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"app-plus": {
-			"background": "#efeff4"
-		}
-	}
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationBarBackgroundColor": "#d2e4ff",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/ucenter/ucenter",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "navigationBarBackgroundColor": "#d2e4ff",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "background": "#efeff4"
+    }
+  },
+  "subPackages": [
+    {
+      "root": "subpkg/index",
+      "pages": [
+        {
+          "path": "detail",
+          "style": {
+            "navigationBarTitleText": "首页详情页",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    },
+    {
+      "root": "subpkg/ucenter",
+      "pages": [
+        {
+          "path": "detail",
+          "style": {
+            "navigationBarTitleText": "个人中心详情页",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    }
+  ],
+  // "preloadRule": {
+  //   "pages/index/index": {
+  //     "network": "all",
+  //     "packages": [
+  //       "index"
+  //     ]
+  //   },
+  //   "pages/ucenter/ucenter": {
+  //     "network": "all",
+  //     "packages": [
+  //       "ucenter"
+  //     ]
+  //   }
+  // },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home_active.png"
+      },
+      {
+        "pagePath": "pages/ucenter/ucenter",
+        "text": "我的",
+        "iconPath": "static/icon/ucenter.png",
+        "selectedIconPath": "static/icon/ucenter_active.png"
+      }
+    ]
+  }
 }

@@ -1,10 +1,9 @@
-import useStore from '@/store'
+import { useStore } from '../store'
 import { BASE_URL } from '../static/js/config'
-
-const store = useStore()
 
 function request({ method = 'GET', url, data = {} }) {
   return new Promise((resolve, reject) => {
+    const store = useStore()
     const sendData = {
       method: method.toUpperCase(),
       url: BASE_URL + url,

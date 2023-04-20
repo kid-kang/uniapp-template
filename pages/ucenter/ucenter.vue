@@ -1,11 +1,9 @@
 <template>
-  <view class="container">{{ store.userInfo.name }}</view>
+  <view class="container">个人中心</view>
 </template>
 
 <script setup>
-  import { useStore } from '@/store'
 
-  const store = useStore()
 </script>
 
 <style lang="scss" scoped>

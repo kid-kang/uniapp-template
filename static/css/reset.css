@@ -152,14 +152,3 @@ select:focus,
 textarea:focus {
   outline: -webkit-focus-ring-color auto 0;
 }
-/* 滚动条样式 */
-*::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-}
-*::-webkit-scrollbar-thumb {
-  height: 40px;
-  background-color: #aaa;
-  border-radius: 16px;
-}

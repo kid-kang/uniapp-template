@@ -4,7 +4,7 @@ import { TOKEN_KEY } from '../static/js/config'
 
 export const useStore = defineStore('store', {
   state: () => ({
-    userInfo: {},
+    userInfo: { name: 'wzk' },
   }),
 
   getters: {

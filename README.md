@@ -14,6 +14,12 @@ uniapp + vue3 + vite 搭建项目的基础架构
     - 不能
   - App.vue中自带 /*每个页面公共css */ @import '@/uni_modules/uni-scss/index.scss';
     - 如果不需要用uni-ui写的辅助样式，建议删除。[详情](https://uniapp.dcloud.net.cn/component/uniui/uni-sass.html#%E4%BD%BF%E7%94%A8scss%E5%8F%98%E9%87%8F)
-- npm init -y
-- npm i pinia
+  - main.js中 `#ifndef VUE3` 和 `#endif` 之间的代码是用于 Vue 2.x 版本的，而 `#ifdef VUE3` 和 `#endif` 之间的代码则是用于 Vue 3.x 版本的。
+- npm init -y、npn i dayjs
+- 写request.js、store、公共样式、utils中的工具函数
+- 本来还想把封装的request挂到全局变量上去，发现vue3 写法更繁琐，还不如直接引用request文件
+- 配置pages.json文件，配置tabbar和分包
+- 遇到的问题：
+  - const store = useStore()不能放在export的函数外面
+  - preloadRule报错
 
