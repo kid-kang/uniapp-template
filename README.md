@@ -25,4 +25,7 @@ uniapp + vue3 + vite 搭建项目的基础架构
     - 但是在 Vue 3 中，由于基于 Proxy 的响应式系统的实现方式不同，Vue 需要在组件函数执行时才能创建实例化组件的上下文。这就意味着，如果你想在 JavaScript 文件中使用 useStore 函数获取一个 store 实例，你需要将其放在组件函数内部定义，以确保 Vue 能够正确地创建实例化组件的上下文。
   - 自定义导航栏发现背景色和手机状态栏时间颜色撞色了
     - 设置navigationBarTextStyle：导航栏标题颜色及状态栏前景颜色为black
+  - 导航栏宽度因为page添加了padding而达不到满宽
+    - 将position: sticky;改成fixed，然后left/right: -16rpx;给个page的负内边距的大小就能占满宽度
+    - fixed造成page页面无视导航栏高度而上移了，所以给了导航组件一个相等高度的占位盒子
 
