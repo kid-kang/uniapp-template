@@ -10,11 +10,16 @@ $iphonex-nav-bar-height: 44px + $iphonex-safe-top-height;
 // iPhone X 系列设备底部 tabbar 高度
 $iphonex-tab-bar-height: 49px + $iphonex-safe-bottom-height;
 
+// 盒子的统一内边距  这两个相反就行
+$page-padding-x: 16rpx;
+$nav-fixd-x: -16rpx;  // 控制自定义导航栏宽度覆盖page内边距
+
 page {
   box-sizing: border-box;
   width: 100%;
   min-height: 100%;
   background-color: #f5f5f5;
+  padding: 0 $page-padding-x;
 }
 
 view {

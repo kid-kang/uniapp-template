@@ -1,15 +1,16 @@
 {
   "globalStyle": {
     "navigationStyle": "custom", // 需要顶部导航或者自定义顶部导航
+    "navigationBarTextStyle": "black", // 控制手机状态栏字体颜色
     "enablePullDownRefresh": false,
-    "backgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8", // 下拉显示出来的窗口的背景色
     "app-plus": {
       "titleNView": false
     }
   },
   "pages": [
     {
-      "path": "pages/index/index"
+      "path": "pages/home/home"
     },
     {
       "path": "pages/ucenter/ucenter"
@@ -17,7 +18,7 @@
   ],
   "subPackages": [
     {
-      "root": "subpkg/index",
+      "root": "subpkg/home",
       "pages": [
         {
           "path": "detail"
@@ -34,10 +35,10 @@
     }
   ],
   "preloadRule": {
-    "pages/index/index": {
+    "pages/home/home": {
       "network": "all",
       "packages": [
-        "subpkg/index"
+        "subpkg/home"
       ]
     },
     "pages/ucenter/ucenter": {
@@ -52,7 +53,7 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "static/icon/home.png",
         "selectedIconPath": "static/icon/home_active.png"
@@ -64,5 +65,8 @@
         "selectedIconPath": "static/icon/ucenter_active.png"
       }
     ]
+  },
+  "easycom": {
+    "autoscan": true // autoscan是否开启自动扫描，开启后将会自动扫描符合components/组件名称/组件名称.vue目录结构的组件
   }
 }

@@ -13,6 +13,18 @@ export const useStore = defineStore('store', {
       const token = JSON.parse(uni.getStorageSync(TOKEN_KEY)) || ''
       return token ? `Bearer ${token}` : ''
     },
+
+    // 计算合适的导航栏高度和状态栏高度
+    navBarConfig: () => {
+      const statusBarHeight = uni.getSystemInfoSync().statusBarHeight // 状态栏高度
+      const { top, height } = uni.getMenuButtonBoundingClientRect() // 胶囊数据
+      // 自定义导航栏高度 = 胶囊高度 + 胶囊的padding*2, 如果获取不到设置为38
+      const navBarHeight = height ? height + (top - statusBarHeight) * 2 : 38
+      return {
+        statusBarHeight,
+        navBarHeight,
+      }
+    },
   },
 
   actions: {
