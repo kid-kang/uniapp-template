@@ -1,41 +1,26 @@
 {
-  "pages": [
-    {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "首页",
-        "navigationBarBackgroundColor": "#d2e4ff",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/ucenter/ucenter",
-      "style": {
-        "navigationBarTitleText": "个人中心",
-        "navigationBarBackgroundColor": "#d2e4ff",
-        "enablePullDownRefresh": false
-      }
-    }
-  ],
   "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationStyle": "custom", // 需要顶部导航或者自定义顶部导航
+    "enablePullDownRefresh": false,
     "backgroundColor": "#F8F8F8",
     "app-plus": {
-      "background": "#efeff4"
+      "titleNView": false
     }
   },
+  "pages": [
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/ucenter/ucenter"
+    }
+  ],
   "subPackages": [
     {
       "root": "subpkg/index",
       "pages": [
         {
-          "path": "detail",
-          "style": {
-            "navigationBarTitleText": "首页详情页",
-            "enablePullDownRefresh": false
-          }
+          "path": "detail"
         }
       ]
     },
@@ -43,30 +28,28 @@
       "root": "subpkg/ucenter",
       "pages": [
         {
-          "path": "detail",
-          "style": {
-            "navigationBarTitleText": "个人中心详情页",
-            "enablePullDownRefresh": false
-          }
+          "path": "detail"
         }
       ]
     }
   ],
-  // "preloadRule": {
-  //   "pages/index/index": {
-  //     "network": "all",
-  //     "packages": [
-  //       "index"
-  //     ]
-  //   },
-  //   "pages/ucenter/ucenter": {
-  //     "network": "all",
-  //     "packages": [
-  //       "ucenter"
-  //     ]
-  //   }
-  // },
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "subpkg/index"
+      ]
+    },
+    "pages/ucenter/ucenter": {
+      "network": "all",
+      "packages": [
+        "subpkg/ucenter"
+      ]
+    }
+  },
   "tabBar": {
+    "selectedColor": "#318FFE",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
