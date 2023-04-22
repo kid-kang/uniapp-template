@@ -12,7 +12,6 @@ $iphonex-tab-bar-height: 49px + $iphonex-safe-bottom-height;
 
 // 盒子的统一内边距  这两个相反就行
 $page-padding-x: 16rpx;
-$nav-fixd-x: -16rpx;  // 控制自定义导航栏宽度覆盖page内边距
 
 page {
   box-sizing: border-box;
@@ -92,4 +91,17 @@ text {
     transform: scaleX(0.5);
     transform-origin: 0 0;
   }
+}
+
+// 顶部自定义导航栏最大的盒子样式写在这就不用引入本文件到nav-bar组件
+// 因为样式需要用 page 的内边距到 $page-padding-x、这样方便统一管理page内边距
+.nav-bar__wrapper {
+  position: fixed;
+  top: 0;
+  left: -$page-padding-x; // 覆盖page的内边距
+  right: -$page-padding-x;
+  z-index: 99;
+  padding: 0 $page-padding-x;
+  overflow: hidden;
+  background-color: #fff;
 }

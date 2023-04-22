@@ -47,14 +47,6 @@
 
 <style lang="scss" scoped>
   .nav-bar__wrapper {
-    position: fixed;
-    top: 0;
-    left: -16rpx; // 覆盖page的内边距
-    right: -16rpx;
-    z-index: 99;
-    overflow: hidden;
-    background-color: #fff;
-
     .nav-bar__content {
       display: flex;
       align-items: center;

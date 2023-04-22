@@ -1,18 +1,23 @@
 {
   "globalStyle": {
-    "navigationStyle": "custom", // 需要顶部导航或者自定义顶部导航
+    // 不需要顶部导航或者自定义顶部导航，把以下注释的代码打开，把这个关掉就是默认导航栏样式
+    "navigationStyle": "custom",
     "navigationBarTextStyle": "black", // 控制手机状态栏字体颜色
     "enablePullDownRefresh": false,
     "backgroundColor": "#F8F8F8", // 下拉显示出来的窗口的背景色
+    // "navigationBarBackgroundColor": "#fff",
     "app-plus": {
+      // "background": "#fff",
       "titleNView": false
     }
   },
   "pages": [
     {
+      // "navigationBarTitleText": "首页",
       "path": "pages/home/home"
     },
     {
+      // "navigationBarTitleText": "个人中心",
       "path": "pages/ucenter/ucenter"
     }
   ],
@@ -21,6 +26,7 @@
       "root": "subpkg/home",
       "pages": [
         {
+          // "navigationBarTitleText": "首页详情页",
           "path": "detail"
         }
       ]
@@ -29,6 +35,7 @@
       "root": "subpkg/ucenter",
       "pages": [
         {
+          // "navigationBarTitleText": "个人中心详情页",
           "path": "detail"
         }
       ]
@@ -65,8 +72,5 @@
         "selectedIconPath": "static/icon/ucenter_active.png"
       }
     ]
-  },
-  "easycom": {
-    "autoscan": true // autoscan是否开启自动扫描，开启后将会自动扫描符合components/组件名称/组件名称.vue目录结构的组件
   }
 }

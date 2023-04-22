@@ -2,6 +2,7 @@
 import { createSSRApp } from 'vue'
 import * as Pinia from 'pinia'
 import App from './App.vue'
+import './static/css/global.scss'
 
 export function createApp() {
   const app = createSSRApp(App)
